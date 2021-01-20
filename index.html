@@ -1,41 +1,19 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Game Loop Buttons</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="css/app.css" />
-        <style>
-            button {
-                background-color: #eb3434;
-                border: none;
-                color: white;
-                padding: 8px 4px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-                cursor: pointer;
-            }
-        </style>
-    </head>
-    <body>
-        <canvas id="canvas" style="border:1px solid #000000;"></canvas>
-        <script src="Lab Javascript File.js"></script>
-        <h1>Game Loop & Buttons</h1>
-        <p>
-            Author: Rauls Bergs ||
-            Date: 08/12/2020
-        </p>
-        <button id="stopMovingButton" type="button" >Stop Moving</button>
-        <button id="runLeftButton" type="button"  >Run left</button>
-        <button id="runRightButton" type="button"  >Run Right</button>
-        <form>
-            <select>
-              <option value="FSpeed">Fastest Speed</option>
-              <option value="NSpeed">Normal Speed</option>
-              <option value="SSpeed">Slowest Speed</option>
-            </select>
-        </form>
-    </body>
+<head>
+    <meta charset="utf-8" />
+    <title>Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+    <script type="text/javascript">
+
+    </script>
+    <form action="game/index.html">
+        <label>GamerTag:<br /><input type="text" name="gamertag" id="GamerTag" /></label>
+        <input type="submit" value="Submit">
+    </form>
+</body>
 </html>
