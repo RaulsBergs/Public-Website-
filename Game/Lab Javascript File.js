@@ -80,8 +80,8 @@ function moveCharacter() {
 }
 
 function onPageLoad() {
-    var playerName = document.getElementsByName("gamertag");
-    document.getElementById("welcome").innerHTML = "Welcome " + playerName;
+   // var playerName = document.getElementsByName("gamertag");
+    document.getElementById("welcome").innerHTML = "Welcome ";
 }
 
 function updateScore() {
