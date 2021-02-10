@@ -1,3 +1,6 @@
+//Game Data
+//document.getElementById("welcome").innerHTML = "Welcome Rauls";
+
 //Width and height for the canvas
 var canvasWidth = 1330;
 var canvasHeight = 500;
@@ -73,14 +76,23 @@ function moveCharacter() {
     if (characterXPos < -200) {
         characterXPos = canvasWidth;
     }
+    localStorage.setItem('xPos', characterXPos);
 }
-               
-//function processForm(){
-    //  if (document.getElementById("SSpeed").selected) {
-    //    characterSpeed = 45;
-    //}
-//}
-            
+
+function onPageLoad() {
+    var playerName = document.getElementsByName("gamertag");
+    document.getElementById("welcome").innerHTML = "Welcome " + playerName;
+}
+
+function updateScore() {
+    var player_score = localStorage.getItem("score");
+
+    document.getElementById("PlayerScore").onclick()
+    {
+        innerHTML(player_score = player_score + 1);
+    }
+}
+     
 //Directs gameloop to the right button function dependant on which button is clicked
 function processButtons() {
     document.getElementById("stopMovingButton").onclick = function () {
@@ -119,9 +131,11 @@ function gameLoop() {
         moveCharacter();
     }
     processButtons();
-    // processForm();
+    //updateScore();
     void ctx.drawImage(backGround, -300, -300);
     ctx.drawImage(character, srcX, srcY, width, height, characterXPos, characterYPos, width, height);
+    document.getElementById("playerPos").innerHTML = "Player Position " + localStorage.getItem("xPos");
+    onPageLoad();
 }
 //Method that runs every 100 milliseconds
 setInterval(gameLoop, 75);

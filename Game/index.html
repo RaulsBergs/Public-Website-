@@ -19,14 +19,11 @@
             }
         </style>
     </head>
-    <body>
+    <body onload="onPageLoad()">
         <canvas id="canvas" style="border:1px solid #000000;"></canvas>
         <script src="Lab Javascript File.js"></script>
-        <script>
-            var url = document.location.href("../index.html");
-            
-        </script>
         <h1>Game</h1>
+        <p id="playerPos">Player Position</p>
         <p id="welcome"> Welcome </p>
         <button id="stopMovingButton" type="button">Stop Moving</button>
         <button id="runLeftButton" type="button">Run left</button>
