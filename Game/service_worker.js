@@ -1,9 +1,8 @@
 var cacheName = 'Game-pwa';
 var filesToCache = [
     '/',
-    '/index.html',
-    '/css/push.css',
-    '/js/script.js'
+    'index.html',
+    'Lab Javascript File.js'
 ];
 
 /* Cache contents when Offline See Cache */
