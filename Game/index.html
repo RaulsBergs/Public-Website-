@@ -1,39 +1,40 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Game</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <style>
-            button {
-                background-color: #eb3434;
-                border: none;
-                color: white;
-                padding: 15px 6px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-                cursor: pointer;
-            }
-        </style>
-    </head>
-    <body onload="onPageLoad()">
-        <canvas id="canvas" style="border:1px solid #000000;"></canvas>
-        <script src="Lab Javascript File.js"></script>
-        <script src="register.js"></script>
-        <h1>Roogals Game</h1>
-        <p id="playerPos">Player Position</p>
-        <p id="welcome"> Welcome </p>
-        <button id="stopMovingButton" type="button">Stop Moving</button>
-        <button id="runLeftButton" type="button">Run left</button>
-        <button id="runRightButton" type="button">Run Right</button>
-        <form>
-            <select>
-                <option value="FSpeed">Fastest Speed</option>
-                <option value="NSpeed">Normal Speed</option>
-                <option value="SSpeed">Slowest Speed</option>
-            </select>
-        </form>
-    </body>
+<head>
+    <meta charset="utf-8" />
+    <title>Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        button {
+            background-color: #eb3434;
+            border: none;
+            color: white;
+            padding: 15px 6px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body onload="onPageLoad()">
+    <canvas id="canvas" style="border:1px solid #000000;"></canvas>
+    <script src="Lab Javascript File.js"></script>
+
+    <h1>Roogals Game</h1>
+    <p id="playerPos">Player Position</p>
+    <p id="welcome"> Welcome </p>
+    <button id="stopMovingButton" type="button">Stop Moving</button>
+    <button id="runLeftButton" type="button">Run left</button>
+    <button id="runRightButton" type="button">Run Right</button>
+    <form>
+        <select>
+            <option value="FSpeed">Fastest Speed</option>
+            <option value="NSpeed">Normal Speed</option>
+            <option value="SSpeed">Slowest Speed</option>
+        </select>
+    </form>
+</body>
+<script src="register.js"></script>
 </html>
