@@ -1,12 +1,12 @@
 //Game Data
-document.getElementById("welcome").innerHTML = "Welcome Rauls";
+//document.getElementById("welcome").innerHTML = "Welcome Rauls";
 
 //Width and height for the canvas
 var canvasWidth = 360;
 var canvasHeight = 500;
 
 //the with and height of the spritesheet
-var spriteWidth = 360;
+var spriteWidth = 1536;
 var spriteHeight = 256;
 
 //there are 1 rows and 5 cols in the player sprite sheet
