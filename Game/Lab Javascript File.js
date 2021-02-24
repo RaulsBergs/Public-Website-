@@ -1,5 +1,5 @@
 //Game Data
-//document.getElementById("welcome").innerHTML = "Welcome Rauls";
+document.getElementById("welcome").innerHTML = "Welcome Rauls";
 
 //Width and height for the canvas
 var canvasWidth = 360;
