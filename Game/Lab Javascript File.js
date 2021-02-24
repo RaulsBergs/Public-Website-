@@ -2,7 +2,7 @@
 //document.getElementById("welcome").innerHTML = "Welcome Rauls";
 
 //Width and height for the canvas
-var canvasWidth = 360;
+var canvasWidth = 345;
 var canvasHeight = 500;
 
 //the with and height of the spritesheet
