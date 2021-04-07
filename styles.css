@@ -1,0 +1,10 @@
+#GameScreen {
+    position: absolute;
+    top: 80px;
+    right: 90px;
+    border: 1px solid black;
+}
+
+body {
+    background-color: #804000;
+}
