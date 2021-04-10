@@ -4,17 +4,22 @@
     <meta charset="utf-8" />
     <title>Warrior on a Rampage</title>
 
-
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
 </head>
 
-<body onload="draw();">
+<body onload="gameLoop();">
     <canvas id="GameScreen" width="1200" height="500"></canvas>
 
+    <div id="Header">
+        <label id="labelUserName" for="fname">Username: </label>
+        <input id="inputUserName" type="text"  name="uName"><br><br>
+        <input id="submitUsername" type="submit" value="Submit">
+    </div>
+
     <img id="IntroScreen" src="assets/OpeningScreen.png" style="visibility: hidden">
+    <img id="InstructionScreen" src="assets/InstructionScreen.png" style="visibility: hidden">
 
-
+    <script src="script.js"></script>
 </body>
 
 </html>
