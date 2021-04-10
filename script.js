@@ -15,6 +15,8 @@ var GameState = GameStates.STARTGAME;
 var canvas = document.getElementById('GameScreen');
 var context = canvas.getContext('2d');
 
+window.onload = draw();
+
 //Draws the GameScreens
 function draw() {
     context.clearRect(0, 0, canvas.width, canvas.height);
