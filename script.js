@@ -20,6 +20,7 @@ window.onload = draw();
 //Draws the GameScreens
 function draw() {
     context.clearRect(0, 0, canvas.width, canvas.height);
+
     //if current gamestate is equal to start game draw the introduction screen
     if (GameState == GameStates.STARTGAME) {
         var img = document.getElementById("IntroScreen");
@@ -29,6 +30,12 @@ function draw() {
     //if current gamestate is equal to input the username then draw the input username screen
     if (GameState == GameStates.INSTRUCTIONSCREEN) {
         var img = document.getElementById("InstructionScreen");
+        context.drawImage(img, 0, 0);
+    }
+
+
+    if (GameState == GameStates.FIGHTENEMY) {
+        var img = document.getElementById("ArenaScreen");
         context.drawImage(img, 0, 0);
     }
 
@@ -42,10 +49,10 @@ function getMousePosition(canvas, event) {
         "Coordinate y: " + mouseYPos);
 }
 var playButtonRect = {
-    posX: 398,
-    posY: 283,
-    posX2: 754,
-    posY2: 364
+    posX: 427 ,
+    posY: 291,
+    posX2: 774 ,
+    posY2: 346
 }
 
 var instructionButtonRect = {
@@ -63,14 +70,23 @@ var backInstructionButtonRect = {
 }
 
 function mouseIntersectsInstructionButton() {
-    if (mouseXPos > instructionButtonRect.posX && mouseXPos < instructionButtonRect.posX2 && mouseYPos > instructionButtonRect.posY && mouseYPos < instructionButtonRect.posY2) {
+    if (mouseXPos > instructionButtonRect.posX && mouseXPos < instructionButtonRect.posX2 &&
+        mouseYPos > instructionButtonRect.posY && mouseYPos < instructionButtonRect.posY2) {
         GameState = GameStates.INSTRUCTIONSCREEN;
     }
 }
 
 function mouseIntersectsBackInstructionButton() {
-    if (mouseXPos > backInstructionButtonRect.posX && mouseXPos < backInstructionButtonRect.posX2 && mouseYPos > backInstructionButtonRect.posY && mouseYPos < backInstructionButtonRect.posY2) {
+    if (mouseXPos > backInstructionButtonRect.posX && mouseXPos < backInstructionButtonRect.posX2 &&
+        mouseYPos > backInstructionButtonRect.posY && mouseYPos < backInstructionButtonRect.posY2) {
         GameState = GameStates.STARTGAME;
+    }
+}
+
+function mouseIntersectsPlayButton() {
+    if (mouseXPos > playButtonRect.posX && mouseXPos < playButtonRect.posX2 &&
+        mouseYPos > playButtonRect.posY && mouseYPos < playButtonRect.posY2) {
+        GameState = GameStates.FIGHTENEMY;
     }
 }
 
@@ -89,6 +105,7 @@ canvas.addEventListener("click", function (e) {
     getMousePosition(canvas, e);
     if (GameState == GameStates.STARTGAME) {
         mouseIntersectsInstructionButton();
+        mouseIntersectsPlayButton();
     }
     if (GameState == GameStates.INSTRUCTIONSCREEN) {
         mouseIntersectsBackInstructionButton();
