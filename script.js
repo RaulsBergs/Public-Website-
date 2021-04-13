@@ -10,10 +10,27 @@ var gameOver = false;
 var mouseXPos = 0;
 var mouseYPos = 0;
 
+var enemyXpos = 400;
+var enemyYpos = 100;
+
+var enemySpriteSheetXPos = 0;
+var enemySpriteSheetYPos = 0;
+
+var enemySpriteSheetWidth = 488;
+var enemySpriteSheetHeight = 220;
+
+var enemySpriteWidth = 488 / 4;
+var enemySpriteHeight = 110;
+
+var enemySpriteFrames = 4;
+var enemySpriteCurrentFrame = 0;
+
 var GameState = GameStates.STARTGAME;
 
 var canvas = document.getElementById('GameScreen');
 var context = canvas.getContext('2d');
+
+var enemySprite = document.getElementById("Enemy");
 
 window.onload = draw();
 
@@ -27,7 +44,7 @@ function draw() {
         context.drawImage(img, 0, 0);
     }
 
-    //if current gamestate is equal to input the username then draw the input username screen
+    //if current gamestate is equal to instruction screen then draw the instruction screen
     if (GameState == GameStates.INSTRUCTIONSCREEN) {
         var img = document.getElementById("InstructionScreen");
         context.drawImage(img, 0, 0);
@@ -37,6 +54,15 @@ function draw() {
     if (GameState == GameStates.FIGHTENEMY) {
         var img = document.getElementById("ArenaScreen");
         context.drawImage(img, 0, 0);
+
+        updateFrame();
+        context.drawImage(enemySprite, enemySpriteSheetXPos, enemySpriteSheetYPos, enemySpriteWidth, enemySpriteHeight,
+            enemyXpos, enemyYpos, 366, 330);
+
+        context.strokeRect(10, 290, 60, 200);
+        context.fillStyle = "#1f7a1f";
+        context.fillRect(11, 289, 58, 200);
+
     }
 
 }
@@ -98,7 +124,7 @@ function gameLoop() {
 }
 
 function update() {
-    
+
 }
 
 canvas.addEventListener("click", function (e) {
@@ -111,3 +137,10 @@ canvas.addEventListener("click", function (e) {
         mouseIntersectsBackInstructionButton();
     }
 });
+
+function updateFrame() {
+    //Calculating the x coordinate for spritesheet 
+    enemySpriteSheetXPos = enemySpriteCurrentFrame * enemySpriteWidth;
+    enemySpriteCurrentFrame = ++enemySpriteCurrentFrame % enemySpriteFrames;
+    //context.clearRect(enemyXpos, enemyYpos, enemySpriteWidth, enemySpriteHeight);
+}
