@@ -13,7 +13,13 @@
     height: 50px;
     border: 2px solid #000;
     background-color: #660000;
-    animation: mymove 5s infinite;
+}
+
+#abilityLog {
+    position: fixed;
+    top: 27px;
+    left: 350px;
+    color:azure;
 }
 
 #labelUserName {
@@ -34,15 +40,6 @@
     top: 47px;
     left: 280px;
     box-shadow: 2px 2px #888888;
-}
-
-@keyframes mymove {
-    from {
-        background-color: #793114;
-    }
-    to {
-        background-color: #371D12;
-    }
 }
 
 body {
