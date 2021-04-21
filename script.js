@@ -244,11 +244,11 @@ function processAttackAbility() {
 
 function processEnemyAttack() {
     if (enemyHealth > 100) {
-        document.getElementById("abilityLog").innerHTML = "The sorcerer lit you on fire dealing 35 damage!";
+        /*document.getElementById("abilityLog").innerHTML = "The sorcerer lit you on fire dealing 35 damage!";*/
         playerHealth = playerHealth - 35;
     } 
     else {
-        document.getElementById("abilityLog").innerHTML = "The sorcerer regenerated 15 health!";
+       /* document.getElementById("abilityLog").innerHTML = "The sorcerer regenerated 15 health!";*/
         enemyHealth = enemyHealth + 15;
     }
 }
